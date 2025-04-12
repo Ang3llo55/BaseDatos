@@ -3,13 +3,13 @@
 // --- Configuración de Supabase ---
 // Intenta obtener las claves desde variables de entorno (MÁS SEGURO)
 // o usa placeholders si no están definidas (pero recuerda configurarlas para que funcione)
-const SUPABASE_URL = import.meta.env?.VITE_SUPABASE_URL || 'https://tjglkfxhsdlehiylsfyq.supabase.co'; // Usa VITE_ si usas Vite, process.env si usas Node/Build Tool, o directo como placeholder
-const SUPABASE_ANON_KEY = import.meta.env?.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqZ2xrZnhoc2RsZWhpeWxzZnlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ0MTkxNzYsImV4cCI6MjA1OTk5NTE3Nn0.qk5A9OFa_-J3AGYiyD5c4Fha4MKopQV1eJU-y0rH3uI';
+const SUPABASE_URL = import.meta.env?.VITE_SUPABASE_URL || 'TU_SUPABASE_URL'; // Usa VITE_ si usas Vite, process.env si usas Node/Build Tool, o directo como placeholder
+const SUPABASE_ANON_KEY = import.meta.env?.VITE_SUPABASE_ANON_KEY || 'TU_SUPABASE_ANON_KEY';
 
 let supabase = null;
 let initError = null;
 
-if (!SUPABASE_URL || SUPABASE_URL === 'https://tjglkfxhsdlehiylsfyq.supabase.co' || !SUPABASE_ANON_KEY || SUPABASE_ANON_KEY === 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRqZ2xrZnhoc2RsZWhpeWxzZnlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ0MTkxNzYsImV4cCI6MjA1OTk5NTE3Nn0.qk5A9OFa_-J3AGYiyD5c4Fha4MKopQV1eJU-y0rH3uI') {
+if (!SUPABASE_URL || SUPABASE_URL === 'TU_SUPABASE_URL' || !SUPABASE_ANON_KEY || SUPABASE_ANON_KEY === 'TU_SUPABASE_ANON_KEY') {
     initError = "Error: Configuración de Supabase incompleta. Revisa las variables SUPABASE_URL y SUPABASE_ANON_KEY.";
     console.error(initError);
     // Podrías lanzar un error o manejarlo en main.js
